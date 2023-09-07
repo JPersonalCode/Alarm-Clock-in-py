@@ -1,12 +1,15 @@
+# Imports
 from datetime import datetime
 import time
 import os
 
+# Class
 class Clock():
     def __init__(self):
         self.Alarm_List = {}
         self.now = 0
         self.current_time = 0
+
     def Current_Time_Update(self):
         self.now = datetime.now()
         self.current_time = self.now.strftime("%H:%M")
@@ -33,6 +36,7 @@ class Clock():
                 print(self.Alarm_List)
                 print("Current Time is: " +self.Current_Time_Update())
                 self.Set_Alarm()
+
     def Remove_Alarm(self):
         Choice = "'"+input("Please Input Name of Alarm to remove: ")+"'"
         for x in self.Alarm_List:
@@ -75,6 +79,8 @@ class Clock():
             "Not a Valid Selection"
             self.Menu()
 
-
+# Call Stack
 Alarm_Clock = Clock()
 Alarm_Clock.Menu()
+
+
