@@ -40,7 +40,7 @@ class Clock():
                 del self.Alarm_List[Choice]
                 print("Alarm Removed")
                 print("Alarm List "+str(self.Alarm_List))
-                input("Press Anykey to Continue")
+                input("Press Any key to Continue")
                 self.Menu()
             else:
                 print("No alarm by That name Exists")
@@ -52,25 +52,25 @@ class Clock():
         print(" 1.Current Time""\n 2.Add Alarm""\n 3.Remove Alarm""\n 4.Alarm List""\n 5.Set Alarms""\n 6.Quit")
         Choice = input()
         if Choice == "1":
-            print(self.Current_Time_Update())
-            input("Press Anykey to Continue")
+            print("Current Time is: "+str(self.Current_Time_Update()))
+            input("Press Any key to Continue")
             self.Menu()
         elif Choice == "2":
             self.add_alarm()
-            input("Press Anykey to Continue")
+            input("Press Any key to Continue")
             self.Menu()
         elif Choice == "3":
             self.Remove_Alarm()
         elif Choice == "4":
             print(self.Alarm_List)
-            input("Press Anykey to Continue")
+            input("Press Any key to Continue")
             self.Menu()
         elif Choice == "5":
             self.Set_Alarm()
-            input("Press Anykey to Continue")
+            input("Press Any key to Continue")
             self.Menu
         elif Choice == "6":
-            quit
+            quit()
         else:
             "Not a Valid Selection"
             self.Menu()
