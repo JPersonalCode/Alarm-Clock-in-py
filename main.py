@@ -27,13 +27,17 @@ class Clock():
             self.Alarm_List[self.Alarm_Name] = {self.Alarm_Time}
             
     def Set_Alarm(self):
-        time.sleep(30)
-        for i in self.Alarm_List:
-            if self.Alarm_Time == str(self.Current_Time_Update()):
-                print("Alarm " + self.Alarm_Name + " " + self.Alarm_Time)
+        print("Alarms Set")
+        print(self.Alarm_List)
+        while True:
+            time.sleep(30)
+            for i in self.Alarm_List:
+                if self.Alarm_Time == str(self.Current_Time_Update()):
+                    print("Alarm " + self.Alarm_Name + " " + self.Alarm_Time)
+                    return
             else :
-                print(self.Alarm_List)
                 print("Current Time is: " + self.Current_Time_Update())
+                
 
     def Remove_Alarm(self):
         print(self.Alarm_List)
