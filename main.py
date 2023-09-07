@@ -31,14 +31,12 @@ class Clock():
         for i in self.Alarm_List:
             if self.Alarm_Time == str(self.Current_Time_Update()):
                 print("Alarm " + self.Alarm_Name + " " + self.Alarm_Time)
-                self.Menu()
             else :
                 print(self.Alarm_List)
                 print("Current Time is: " + self.Current_Time_Update())
-                self.Set_Alarm()
 
     def Remove_Alarm(self):
-        Choice = "'" + input("Please Input Name of Alarm to remove: ") + "'"
+        Choice = input("Please Input Name of Alarm to remove: ")
         for x in self.Alarm_List:
             if str(x) == str(Choice):
                 del self.Alarm_List[Choice]
@@ -57,29 +55,24 @@ class Clock():
         Choice = input()
         if Choice == "1":
             print("Current Time is: "+ str(self.Current_Time_Update()))
-            input("Press Any key to Continue")
-            self.Menu()
         elif Choice == "2":
             self.add_alarm()
-            input("Press Any key to Continue")
-            self.Menu()
         elif Choice == "3":
             self.Remove_Alarm()
         elif Choice == "4":
             print(self.Alarm_List)
-            input("Press Any key to Continue")
-            self.Menu()
         elif Choice == "5":
             self.Set_Alarm()
-            input("Press Any key to Continue")
-            self.Menu
         elif Choice == "6":
             quit()
         else:
             "Not a Valid Selection"
-            self.Menu()
+        input("Press Any key to Continue")
+        self.Menu()
 
 # Call Stack
 Alarm_Clock = Clock()
 Alarm_Clock.Menu()
+
+
 
