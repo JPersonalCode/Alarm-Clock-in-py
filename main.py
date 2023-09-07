@@ -42,11 +42,8 @@ class Clock():
                 del self.Alarm_List[Choice]
                 print("Alarm Removed")
                 print("Alarm List " + str(self.Alarm_List))
-                input("Press Any key to Continue")
-                self.Menu()
             else:
                 print("No alarm by That name Exists")
-                self.Menu()
 
     def Menu(self):
         os.system('cls')
@@ -73,6 +70,4 @@ class Clock():
 # Call Stack
 Alarm_Clock = Clock()
 Alarm_Clock.Menu()
-
-
 
