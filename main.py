@@ -36,12 +36,14 @@ class Clock():
                 print("Current Time is: " + self.Current_Time_Update())
 
     def Remove_Alarm(self):
+        print(self.Alarm_List)
         Choice = input("Please Input Name of Alarm to remove: ")
         for x in self.Alarm_List:
             if str(x) == str(Choice):
                 del self.Alarm_List[Choice]
                 print("Alarm Removed")
                 print("Alarm List " + str(self.Alarm_List))
+                break
             else:
                 print("No alarm by That name Exists")
 
